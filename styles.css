@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    
+}
+
+header {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    height: 50px;
+    font-size: 45px;
+    color: white;
+    font-weight: bold;
+}
+
+#gridContainer {
+    width: 400px;
+    height: 400px;
+    background-color: gray;
+    
+    box-sizing: border-box;
+    margin: 50px auto;
+    display: grid;
+}
