@@ -13,9 +13,26 @@ function storePrompt() {
     return size;
 }
 
-function changeColor(e) {
-    e.target.style.backgroundColor = 'red';
+function alertGridSize() {
+    if (size > 100) {
+        alert('Cannot have grid size > 100');
+        createGrid();
+    }
 }
+
+const randomRed = Math.floor(Math.random() * 256);
+const randomGreen = Math.floor(Math.random() * 256);
+const randomBlue = Math.floor(Math.random() * 256);
+
+let redBlueGreen = function changeColor(e) {
+    e.target.style.backgroundColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
+}
+
+
+
+
+
+
 
 function createGridItem() {
     let completeGrid = size * size;
@@ -25,50 +42,26 @@ function createGridItem() {
     for (let i = 0; i < completeGrid; i++) {
         const gridItem = document.createElement('div');
         gridItem.classList.add('gridItem');
-        gridItem.addEventListener('mouseover', changeColor);
+        gridItem.addEventListener('mouseover', redBlueGreen);
         gridContainer.appendChild(gridItem);
-        
     } 
 }
 
-
-// function changeColor() {
-//     gridItem.setAttribute('style', 'background-color: black;');
-// }
-
-// function changeColor(e) {
-//       e.target.style.backgroundColor = currentColor
-//   }
-
 function createGrid() {
+    clearGrid();
     storePrompt();
     createGridItem();
+    alertGridSize();
 }
 
 btn.addEventListener('click', createGrid);
 
+// Clearing grid
 
+const refreshGrid = document.querySelector('#refreshGrid');
 
-const attempt = document.querySelector('#attempt');
-
-function chBackcolor() {
-    attempt.style.backgroundColor = 'red';
+function clearGrid() {
+    gridContainer.innerHTML = '';
 }
 
-attempt.addEventListener('mouseover', chBackcolor);
-
-
-
-
-
-
-
-
-
-// const changeme = document.querySelector('#changeme');
-
-// function chBackcolor() {
-//     changeme.style.backgroundColor = 'red';
-// }
-
-// changeme.addEventListener('click', chBackcolor);
+refreshGrid.addEventListener('click',clearGrid);
