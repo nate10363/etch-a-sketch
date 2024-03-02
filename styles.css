@@ -1,6 +1,15 @@
 body {
     margin: 0;
-    background-color: lightpink;
+    /* background-color: lightpink; */
+    height: 100vh;
+    background: url('./bananas.png') repeat 0 0;
+    animation: animate-bg 2s infinite linear;
+}
+
+@keyframes animate-bg {
+    100% {
+        background-position: 50px 50px;
+    }
 }
 
 header {
@@ -27,12 +36,45 @@ main {
     width: 400px;
     height: 400px;
     background-color: white;
-    
-    border: 1px solid black;
-    margin: 50px auto;
+    border: 5px solid lightpink;
+    margin: 30px auto;
     display: grid;
+    box-sizing: content-box;
 }
 
-/* #refreshGrid {
-    margin: 0 auto;
-} */
+button {
+    cursor: pointer;
+}
+
+#btn {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 3px solid lightpink;
+    color: lightpink;
+    background-color: white;
+}
+
+#btn:hover {
+    border: none;
+    background-color: lightpink;
+    color: white;
+    font-weight: bold;
+}
+
+#refreshGrid {
+    border: 2px solid lightpink;
+    border-radius: 5px;
+    background-color: white;
+    color: lightpink;
+    height: 30px;
+    width: 150px;
+    font-size: 15px;
+}
+
+#refreshGrid:hover {
+    background-color: lightpink;
+    color: white;
+    font-weight: bold;
+}
