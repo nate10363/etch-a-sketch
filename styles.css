@@ -16,13 +16,18 @@ header {
     display: flex; 
     justify-content: center;
     align-items: center;
-    margin-top: 0;
-    margin-bottom: 40px;
-    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    margin: 10px auto 40px auto;
+    /* margin-bottom: 40px; */
+    /* background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red); */
     height: 50px;
-    font-size: 45px;
+    /* font-size: 45px; */
+    font-size: 60px;
     color: white;
+    /* color: lightpink; */
     font-weight: bold;
+    width: 60%;
+    background-color: lightpink;
+    border-radius: 10px;
 }
 
 main {
@@ -54,6 +59,7 @@ button {
     border: 3px solid lightpink;
     color: lightpink;
     background-color: white;
+    margin-top: -10px;
 }
 
 #btn:hover {
